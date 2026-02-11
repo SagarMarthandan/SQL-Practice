@@ -1,50 +1,47 @@
 # SQL Practice and Revision
 
-This repository contains a collection of SQL scripts used for practicing and revising various database concepts, ranging from basic string manipulation to advanced data warehousing techniques.
+This repository contains a collection of SQL scripts used for practicing and revising various database concepts, from basic CRUD operations to advanced window functions and views.
 
 ## Files Overview
 
-### 1. Basic Data & String Functions
-*   **[book_data.sql](book_data.sql)**: Sets up the core `books` table and populates it with initial sample data. This serves as the foundation for many of the practice queries.
-*   **7. string_functions.sql**: A comprehensive guide to string manipulation. It covers functions like `CONCAT`, `SUBSTRING`, `REPLACE`, `CHAR_LENGTH`, `TRIM`, and case transformations (`UPPER`/`LOWER`).
+### 1. Fundamentals & CRUD Basics
 
-### 2. Filtering & Conditional Logic
-*   **11. logival_operators.sql**: Focuses on refining data retrieval. It includes practice with:
-    *   Comparison operators (`>`, `<`, `!=`).
-    *   Logical operators (`AND`, `OR`, `NOT`).
-    *   Range and set filters (`BETWEEN`, `IN`).
-    *   Conditional logic using `CASE` statements to categorize data on the fly.
+- **[1-5. practice.sql](1-5. practice.sql)**: Basic table creation (`CREATE`), data insertion (`INSERT`), and schema inspection (`DESC`).
+- **[5. CRUD_Basics.sql](5. CRUD_Basics.sql)**: Core CRUD operations (`SELECT`, `UPDATE`, `DELETE`) using a `cats` dataset.
+- **[6. CRUD_challenge.sql](6. CRUD_challenge.sql)**: Practice exercises for reinforcing CRUD concepts.
+- **[10. data_types.sql](10. data_types.sql)**: Exploring various MySQL data types including `DECIMAL`, `DATE`, `TIME`, `DATETIME`, and `TIMESTAMP`.
 
-### 3. Data Retrieval & Ordering
-*   **8. Refining_selections.sql**: Demonstrates various techniques for refining data selection, including:
-    *   Ordering results (`ORDER BY` ASC/DESC).
-    *   Pattern matching with `LIKE` (including wildcards and escaping).
-    *   Limiting the number of results (`LIMIT`).
-    *   Selecting distinct values.
+### 2. String & Aggregate Functions
 
-### 4. Advanced Querying & Database Objects
-*   **15. views_models_more.sql**: Explores more advanced SQL features such as:
-    *   Creating and using `VIEWS` for virtual tables.
-    *   Aggregating data with `GROUP BY` and `HAVING`.
-    *   Using `WITH ROLLUP` for hierarchical summaries.
-    *   Inspecting and setting SQL modes.
+- **[7. string_functions.sql](7. string_functions.sql)**: Comprehensive guide to string manipulation (`CONCAT`, `SUBSTRING`, `REPLACE`, `CHAR_LENGTH`, etc.).
+- **[9. aggregate_functions.sql](9. aggregate_functions.sql)**: Working with group functions like `COUNT`, `MIN`, `MAX`, `SUM`, and `AVG` along with `GROUP BY`.
 
-### 5. Sample Databases (Complex Schemas)
-*   **Sakila Database**:
-    *   **sakila-mv-schema.sql**: The full schema for the Sakila sample database. It's excellent for practicing complex joins across many tables (films, actors, customers, etc.) and understanding views and triggers.
-    *   **sakila-mv-data.sql**: The corresponding data insertion script for the Sakila schema.
+### 3. Selection & Filtering
 
-### 6. Advanced Data Warehousing (Azure SQL DW)
-*   **load-contoso-data-warehouse-to-sql-data-warehouse.sql**: An advanced script demonstrating enterprise-level data loading. Key concepts include:
-    *   **PolyBase**: Loading data from Azure Blob Storage.
-    *   **External Tables**: Defining metadata for remote data.
-    *   **CTAS**: Using `CREATE TABLE AS SELECT` for high-performance data movement.
-    *   **Optimization**: Rebuilding columnstore indexes and creating statistics to ensure query performance.
+- **[8. Refining_selections.sql](8. Refining_selections.sql)**: Refining data retrieval using `DISTINCT`, `ORDER BY`, `LIMIT`, and `LIKE` pattern matching.
+- **[11. logival_operators.sql](11. logival_operators.sql)**: Practice with logical operators (`AND`, `OR`, `NOT`, `BETWEEN`, `IN`) and `CASE` statements.
+
+### 4. Database Schema & Constraints
+
+- **[book_data.sql](book_data.sql)**: Setup script for the `books` table used in various exercises.
+- **[12. constraints_ALTER_table.sql](12. constraints_ALTER_table.sql)**: Working with constraints (`UNIQUE`, `CHECK`) and modifying existing tables using `ALTER TABLE`.
+
+### 5. Joins & Relationships (One-to-Many & Many-to-Many)
+
+- **[13. one_to_many_joins.sql](13. one_to_many_joins.sql)**: Understanding primary and foreign keys, along with `INNER`, `LEFT`, and `RIGHT JOIN`s.
+- **[14. many_to_many_joins.sql](14. many_to_many_joins.sql)**: Implementing complex relationships using join tables (e.g., reviewers and series).
+
+### 6. Advanced SQL Concepts
+
+- **[15. views_models_more.sql](15. views_models_more.sql)**: Creating `VIEWS`, using `HAVING` clauses, and the `WITH ROLLUP` modifier.
+- **[16. Window_functions.sql](16. Window_functions.sql)**: Advanced analytical queries using `OVER()`, `PARTITION BY`, `RANK()`, `LEAD()`, and `LAG()`.
 
 ## How to Use
-1.  **Setup**: Run the schema scripts first (like `book_data.sql` or `sakila-mv-schema.sql`).
-2.  **Practice**: Open the function-specific scripts (String Functions, Logical Operators, Data Retrieval & Ordering, Advanced Querying & Database Objects) to see examples and try writing your own variations.
-3.  **Advanced**: Use the Contoso script to understand how SQL scales in a Data Warehouse environment.
+
+1.  **Setup**: Run initial data scripts like `book_data.sql` to populate the environment.
+2.  **Learn**: Follow the numbered scripts sequentially to move from basics to advanced topics.
+3.  **Practice**: Modify the queries in the scripts to test your understanding of different functions and operations.
 
 ---
-*Happy Querying!*
+
+_Happy Querying!_
